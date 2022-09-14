@@ -326,8 +326,8 @@ bot.action('mro221_21', (ctx)=>{
         ctx.reply(data)
       });
 })
-bot.action('mro2022_21', (ctx)=>{
-    fs.readFile('./jadvalla/mro2022_21.txt', 'utf8', (err, data) => {
+bot.action('mro222_21', (ctx)=>{
+    fs.readFile('./jadvalla/mro222_21.txt', 'utf8', (err, data) => {
         if (err) {
             ctx.reply('Ushbu guruh dars jadvali hali yuklanmagan!!!')
           return ;
