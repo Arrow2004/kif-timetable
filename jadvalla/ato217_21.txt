@@ -1,0 +1,43 @@
+217-21 ATo' Jadvali: 
+    1️⃣-Dushanba:
+    *****
+    
+    2️⃣-Seshanba:
+    1) Elektronika va sxemalar 1(lab.) 
+   - (A325)
+    2) Elektronika va sxemalar 1(ma'ruza)
+    - (A327)
+    3) / Elektronika va sxemalar 1(ma'ruza)
+    - (A320)
+    
+    3️⃣-Chorshanba:
+   1)  Ma’lumotlar tuzilmasi va algoritmlari (Amal.)
+    - (8.03)
+   2) Ma’lumotlar tuzilmasi va algoritmlari (ma'ruza)
+    - (8.02)
+   3)  / Ma’lumotlar tuzilmasi va algoritmlari (ma'ruza)
+    - (8.02)
+    
+    4️⃣-Payshanba:
+    1) / Diskret tuzilmalar (ma'ruza)
+    - (7.02)
+    2) Diskret tuzilmalar (Amal.)
+    - (8.03)
+    3) Diskret tuzilmalar (ma'ruza)
+    - (7.02)
+        
+    5️⃣-Juma:
+    1) Kiberxavfsizlik asos. (ma'ruza)
+    - (9.02)
+    2) Kiberxavfsizlik asoslari (Amal.)
+    - (5.03)
+    3) / Kiberxavfsizlik asoslari (ma'ruza)
+    - (7.02)
+
+     6️⃣-Shanba:
+    1) Web dasturlashga kirish (ma'ruza) 
+    -  (9.02)
+    2) Web dasturlashga kirish (Amal.)
+    - (7.03)
+    3) / Web dasturlashga kirish (ma'ruza)
+    - (7.02)
