@@ -408,8 +408,9 @@ bot.action('mrr235_21', (ctx)=>{
       });
 })
 bot.action('sir236_21', (ctx)=>{
-    fs.readFile('./jadvalla/sir236_21.txt', 'utf8', (err, data) => {
+    fs.readFile('./jadvalla/236guruh.txt', 'utf8', (err, data) => {
         if (err) {
+            console.log(err)
             ctx.reply('Ushbu guruh dars jadvali hali yuklanmagan!!!')
           return ;
         }
