@@ -236,6 +236,15 @@ bot.action('kio211_21', (ctx)=>{
         ctx.reply(data)
       });
 })
+bot.action('kio212_21', (ctx)=>{
+  fs.readFile('./jadvalla/kio212_21.txt', 'utf8', (err, data) => {
+      if (err) {
+          ctx.reply('Ushbu guruh dars jadvali hali yuklanmagan!!!')
+        return ;
+      }
+      ctx.reply(data)
+    });
+})
 bot.action('kio213_21', (ctx)=>{
     fs.readFile('./jadvalla/kio213_21.txt', 'utf8', (err, data) => {
         if (err) {
