@@ -1,7 +1,7 @@
 const { Telegraf } = require("telegraf");
 const { Router, Markup } = Telegraf
 const dotenv = require('dotenv').config();
-const bot = new Telegraf(process.env.TEST_TOKEN);
+const bot = new Telegraf(process.env.TOKEN);
 console.log(process.env.TOKEN)
 fs = require('fs');
 bot.start((ctx)=>{
