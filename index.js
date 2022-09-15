@@ -76,14 +76,16 @@ bot.start( async (ctx)=>{
 })
 bot.command('/stat', async (ctx)=>{
   let len = await readDb();
-  ctx.reply(`Assalomu laykum botdagi foydalanuvchilar soni: ${len[0]}`);
+  ctx.reply(`Assalomu alaykum botdagi foydalanuvchilar soni: ${len[0]}`);
 })
 bot.command('/new', (ctx)=>{
     idGroup = ctx.message.text.slice(5);
-    bot.on('message', (ctx)=>{
-      let writer = fs.createWriteStream('./jadvalla/'+idGroup+'.txt') 
-      writer.write(ctx.message.text);
-    })
+    if(admins.includes(ctx.chat.id)){
+      bot.on('message', (ctx)=>{
+        let writer = fs.createWriteStream('./jadvalla/'+idGroup+'.txt') 
+        writer.write(ctx.message.text);
+      })
+    }  
     
 })
 bot.command('/rec', async (ctx)=>{
