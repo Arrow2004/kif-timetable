@@ -1,0 +1,41 @@
+223-20 MTr Jadvali: 
+    -Dushanba:
+    1) Kompyuter tarmoqlari (ma'ruza.)
+     - (B413)
+     2) Kompyuter tarmoqlari (Amal.)
+     - (B011)
+     3) Kompyuter tarmoqlari (Ma'ruza.)
+     - (B413)
+    
+    -Seshanba:
+    1) Inson-mashina o'zaro ta'siri (Ma'ruza.)
+    -(6.07)
+    2) Inson-mashina o'zaro ta'siri (Ma'ruza.)
+    -(6.07)
+    3) Inson-mashina o'zaro ta'siri (Amal.)
+    -(6.07)
+    
+    -Chorshanba:
+    ******
+    
+    -Payshanba:
+    1) Ped.Psixolog. (OEL001 (ma’ruza:)) Zamonaviy iqtisodiyot (OEL006 (ma’ruza:)) Infokom (OEL003 (ma’ruza:)) Hayot faoliyati Haf (OEL004-1 (amaliy:) OEL004-2 (amaliy:))
+    -()
+    2) Hayot faoliyati Haf. (OEL004 (ma’ruza:)) Ped.Psixolog. (OEL001-1 (amaliy: ) OEL001-2 (amaliy: )) Infokom (OEL003-1 (amaliy:) OEL003-2 (amaliy:)) Zamonaviy iqtisodiyot (OEL006-1 (amaliy:) OEL006-2 (amaliy: ))
+    -()
+        
+    -Juma:
+    1) Kompyuter grafikasi (Ma'ruza.) 
+    -(4.02)
+    2) Kompyuter grafikasi (Ma'ruza.) 
+    -(4.02)
+    3) Kompyuter grafikasi (Ma'ruza.) 
+    -(5.07)
+
+     -Shanba:
+    1) Dasturlash uslublari va paradigmalari (ma’ruza) 
+    -(4.07)
+    2) Dasturlash uslublari va paradigmalari (Amal.) 
+    -(4.07)
+    3) Dasturlash uslublari va paradigmalari (Amal.) 
+    -(4.07)

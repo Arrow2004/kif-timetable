@@ -1,0 +1,41 @@
+221-20 KIr Jadvali: 
+    1️⃣-Dushanba:
+    1) Kompyuter tarmoqlari (ma'ruza)
+    -(8.02)
+    2) Kompyuter tarmoqlari (ma'ruza)
+    -(8.02)
+    3) Kompyuter tarmoqlari (lb)
+    -(8.01) )
+    
+    2️⃣-Seshanba:
+    1) Kompyuter arxitekturasi (ma'ruza) 
+    -(6.02)
+    2) Kompyuter arxitekturasi (ma'ruza) 
+    -(6.02)
+    3) Kompyuter arxitekturasi (pr.) 
+    -(8.01)
+    
+    3️⃣-Chorshanba:
+    ******
+    
+    4️⃣-Payshanba:
+    1) Ped.Psixolog. (OEL001 (ma’ruza:)) Zamonaviy iqtisodiyot (OEL006 (ma’ruza:)) Infokom (OEL003 (ma’ruza:)) Hayot faoliyati Haf (OEL004-1 (amaliy:) OEL004-2 (amaliy:))
+    -()
+    2) Hayot faoliyati Haf. (OEL004 (ma’ruza:)) Ped.Psixolog. (OEL001-1 (amaliy: ) OEL001-2 (amaliy: )) Infokom (OEL003-1 (amaliy:) OEL003-2 (amaliy:)) Zamonaviy iqtisodiyot (OEL006-1 (amaliy:) OEL006-2 (amaliy: ))
+    -()
+        
+    5️⃣-Juma:
+    1) Tizimlar va signallarni qayta ishlash (ma’ruza) 
+    -(B413)
+    2) Raqamli qurilmalarni loyixalashga kirish (ma’ruza) 
+    -(A327)
+    3) Raqamli qurilmalarni loyixalashga kirish (lb.) 
+    -(335A)
+
+     6️⃣-Shanba:
+    1) Tizimlar va signallarni qayta ishlash (ma’ruza) 
+    -(B421)
+    2) Tizimlar va signallarni qayta ishlash (pr.) 
+    -(A312)
+    3) Raqamli qurilmalarni loyixalashga kirish (lb.) 
+    -(A324)

@@ -3,9 +3,51 @@ const { Router, Markup } = Telegraf
 const dotenv = require('dotenv').config();
 const bot = new Telegraf(process.env.TOKEN);
 console.log(process.env.TOKEN)
+const mongoose = require('mongoose');
+const User = require("./user").User;
 fs = require('fs');
-bot.start((ctx)=>{
-        bot.telegram.sendMessage(ctx.chat.id, 'Assalomu alaykum. Kursni tanlang: ',{
+mongoose
+  .connect(
+    "mongodb+srv://root:shirina1708@cluster0.ufftb.mongodb.net/kif-timetable?retryWrites=true&w=majority",
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    }
+  )
+  .then(() => {
+    console.log("Database connected");
+  })
+  .catch((e) => {
+    console.log(e);
+  });
+const admins = [871447523]
+//User
+async function checkUser(newId) {
+  const user = await User.find({
+    id: newId,
+  });
+  return user[0] !== undefined;
+}
+async function createUser(userObj) {
+  const user = new User(userObj);
+  const saveUser = await user.save();
+}
+async function readDb() {
+  const users = await User.find();
+  const usersId = users.map((e) => e.id);
+  return [users.length, usersId];
+}
+// Bot eventlari
+bot.start( async (ctx)=>{
+    const newUser = {
+      id: ctx.chat.id,
+      firstName: ctx.chat.first_name,
+      lastName: ctx.chat.last_name,
+      userName: ctx.chat.username,
+      inviteLink: `tg://user?id=${ctx.chat.id}`,
+      userType: ctx.chat.type,
+    };
+    bot.telegram.sendMessage(ctx.chat.id, 'Assalomu alaykum. Kursni tanlang: ',{
             reply_markup: {
                 inline_keyboard: [
                     [
@@ -19,8 +61,46 @@ bot.start((ctx)=>{
                 ]
             }
         })
+    if (!(await checkUser(newUser.id))) {
+        await createUser(newUser);
+        ctx.telegram.sendMessage(
+            "871447523",
+            `Botda yangi foydalanuvchi:
+            Ismi:  ${newUser.firstName}
+            Familyasi: ${newUser.lastName}
+            Foydalanuvchi nomi: ${newUser.userName}
+            ID: ${newUser.id}
+            `
+    );
     }
-    )
+})
+bot.command('/stat', async (ctx)=>{
+  let len = await readDb();
+  ctx.reply(`Assalomu laykum botdagi foydalanuvchilar soni: ${len[0]}`);
+})
+bot.command('/new', (ctx)=>{
+    idGroup = ctx.message.text.slice(5);
+    bot.on('message', (ctx)=>{
+      let writer = fs.createWriteStream('./jadvalla/'+idGroup+'.txt') 
+      writer.write(ctx.message.text);
+    })
+    
+})
+bot.command('/rec', async (ctx)=>{
+  if(admins.includes(ctx.chat.id)){
+      bot.on("photo", async (ctx) => {
+        usersId = await readDb();
+          usersId[1].forEach((userID) => {
+            ctx.telegram.forwardMessage(
+              userID,
+              ctx.message.from.id,
+              ctx.message.message_id
+            );
+          });
+      });
+
+  }
+})
 bot.action('second', (ctx)=>{
     bot.telegram.sendMessage(ctx.chat.id, 'Assalomu alaykum. Guruhni tanlang tanlang: ',{
         reply_markup: {
@@ -78,7 +158,7 @@ bot.action('third', (ctx)=>{
                     { text: '211-20 KIo\'', callback_data: 'kio211_20'},
                     { text: '212-20 KIo\'', callback_data: 'kio212_20'},
                     { text: '213-20 KIo\'', callback_data: 'kio213_20'},
-                    { text: '214-20 Kling', callback_data: 'kkling214_20'}
+                    { text: '214-20 Kling', callback_data: 'kling214_20'}
                 ],
                 [
                     { text: '215-20 ATo\'', callback_data: 'ato215_20'},
@@ -107,7 +187,7 @@ bot.action('fourth', (ctx)=>{
                     { text: '211-19 KIo\'', callback_data: 'kio211_19'},
                     { text: '212-19 KIo\'', callback_data: 'kio212_19'},
                     { text: '213-19 KIo\'', callback_data: 'kio213_19'},
-                    { text: '214-19 Kling', callback_data: 'kkling214_19'}
+                    { text: '214-19 Kling', callback_data: 'kling214_19'}
                 ],
                 [
                     { text: '215-19 ATo\'', callback_data: 'ato215_19'},
@@ -125,96 +205,124 @@ bot.action('fourth', (ctx)=>{
         }
     })
 })
-bot.action('mto217_19', (ctx)=>{
-    ctx.reply(`
-    217-19 MTo‘ Jadvali: 
-    1️⃣-Dushanba:
-    1) IT/Mutaxassislik tanlov fani 1 (3D texnologiya) (Amal.)
-    - (5.07)
-    2) IT/Mutaxassislik tanlov fani 1 (3D texnologiya) (Amal.)
-    - (5.07)
-    3) IT/Mutaxassislik tanlov fani 1 (3D texnologiya) (Ma'ruza)
-    - (4.02)
-    
-    2️⃣-Seshanba:
-    1) IT/Mutaxassislik tanlov fani 2 (Multimedia dizayn) (Amal.)
-    - (5.03)
-    2) IT/Mutaxassislik tanlov fani 2 (Multimedia dizayn) (Ma'ruza)
-    - (4.02)
-    3) IT/Mutaxassislik tanlov fani 2 (Multimedia dizayn) (Amal.)
-    - (5.03)
-   
-    3️⃣-Chorshanba:
-    1) IT/Mutaxassislik tanlov fani 3 (Multimedia injiniringi) (Ma'ruza)
-    - (5.02)
-    2) IT/Mutaxassislik tanlov fani 3 (Multimedia injiniringi) (Amal.)
-    - (5.01)
-    3) IT/Mutaxassislik tanlov fani 3 (Multimedia injiniringi) (Amal.)
-    - (5.01)
-    
-    4️⃣-Payshanba:
-    1) Web dizayn (Amal.)
-    - (6.07)
-    2) Web dizayn (Amal.)
-    - (6.07)
-    3) Web dizayn (Ma'ruza)
-    - (4.02)
-        
-    5️⃣-Juma:
-    ***
 
-    6️⃣-Shanba:
-    ***`)
+//Uchinchi kurslar
+bot.action('kio210_20', (ctx)=>{
+  fs.readFile('./jadvalla/kio210_20.txt', 'utf8', (err, data) => {
+      if (err) {
+          ctx.reply('Ushbu guruh dars jadvali hali yuklanmagan!!!')
+        return ;
+      }
+      ctx.reply(data)
+    });
 })
-bot.action('mto218_19', (ctx)=>{
-    ctx.reply(`218-19 MTo‘ Jadvali: 
-    1️⃣-Dushanba:
-    1) IT/Mutaxassislik tanlov fani 1 (3D texnologiya) (Amal.)
-    - (5.03)
-    2) IT/Mutaxassislik tanlov fani 1 (3D texnologiya) (Amal.)
-    - (5.03)
-    3) IT/Mutaxassislik tanlov fani 1 (3D texnologiya) (Ma'ruza)
-    - (4.02)
-    
-    2️⃣-Seshanba:
-    1) IT/Mutaxassislik tanlov fani 2 (Multimedia dizayn) (Amal.)
-    - (5.07)
-    2) IT/Mutaxassislik tanlov fani 2 (Multimedia dizayn) (Ma'ruza)
-    - (4.02)
-    3) IT/Mutaxassislik tanlov fani 2 (Multimedia dizayn) (Amal.)
-    - (5.07)
-   
-    3️⃣-Chorshanba:
-    1) IT/Mutaxassislik tanlov fani 3 (Multimedia injiniringi) (Ma'ruza)
-    - (5.02)
-    2) IT/Mutaxassislik tanlov fani 3 (Multimedia injiniringi) (Amal.)
-    - (5.07)
-    3) IT/Mutaxassislik tanlov fani 3 (Multimedia injiniringi) (Amal.)
-    - (5.07)
-    
-    4️⃣-Payshanba:
-    1) Web dizayn (Amal.)
-    - (5.07)
-    2) Web dizayn (Amal.)
-    - (5.07)
-    3) Web dizayn (Ma'ruza)
-    - (4.02)
-        
-    5️⃣-Juma:
-    ***
-
-    6️⃣-Shanba:
-    ***
-    `)
+bot.action('kio211_20', (ctx)=>{
+  fs.readFile('./jadvalla/kio211_20.txt', 'utf8', (err, data) => {
+      if (err) {
+          ctx.reply('Ushbu guruh dars jadvali hali yuklanmagan!!!')
+        return ;
+      }
+      ctx.reply(data)
+    });
 })
-bot.action('mtr223_19', (ctx)=>{
-    fs.readFile('./jadvalla/mtr223_19.txt', 'utf8', (err, data) => {
-        if (err) {
-            ctx.reply('Ushbu guruh dars jadvali hali yuklanmagan!!!')
-          return ;
-        }
-        ctx.reply(data)
-      });
+bot.action('kio212_20', (ctx)=>{
+  fs.readFile('./jadvalla/kio212_20.txt', 'utf8', (err, data) => {
+      if (err) {
+          ctx.reply('Ushbu guruh dars jadvali hali yuklanmagan!!!')
+        return ;
+      }
+      ctx.reply(data)
+    });
+})
+bot.action('kio213_20', (ctx)=>{
+  fs.readFile('./jadvalla/kio213_20.txt', 'utf8', (err, data) => {
+      if (err) {
+          ctx.reply('Ushbu guruh dars jadvali hali yuklanmagan!!!')
+        return ;
+      }
+      ctx.reply(data)
+    });
+})
+bot.action('kling214_20', (ctx)=>{
+  fs.readFile('./jadvalla/kling214_20.txt', 'utf8', (err, data) => {
+      if (err) {
+          ctx.reply('Ushbu guruh dars jadvali hali yuklanmagan!!!')
+        return ;
+      }
+      ctx.reply(data)
+    });
+})
+bot.action('ato215_20', (ctx)=>{
+  fs.readFile('./jadvalla/ato215_20.txt', 'utf8', (err, data) => {
+      if (err) {
+          ctx.reply('Ushbu guruh dars jadvali hali yuklanmagan!!!')
+        return ;
+      }
+      ctx.reply(data)
+    });
+})
+bot.action('ato216_20', (ctx)=>{
+  fs.readFile('./jadvalla/ato216_20.txt', 'utf8', (err, data) => {
+      if (err) {
+          ctx.reply('Ushbu guruh dars jadvali hali yuklanmagan!!!')
+        return ;
+      }
+      ctx.reply(data)
+    });
+})
+bot.action('mto217_20', (ctx)=>{
+  fs.readFile('./jadvalla/mto217_20.txt', 'utf8', (err, data) => {
+      if (err) {
+          ctx.reply('Ushbu guruh dars jadvali hali yuklanmagan!!!')
+        return ;
+      }
+      ctx.reply(data)
+    });
+})
+bot.action('mto218_20', (ctx)=>{
+  fs.readFile('./jadvalla/mto218_20.txt', 'utf8', (err, data) => {
+      if (err) {
+          ctx.reply('Ushbu guruh dars jadvali hali yuklanmagan!!!')
+        return ;
+      }
+      ctx.reply(data)
+    });
+})
+bot.action('kir220_20', (ctx)=>{
+  fs.readFile('./jadvalla/kir220_20.txt', 'utf8', (err, data) => {
+      if (err) {
+          ctx.reply('Ushbu guruh dars jadvali hali yuklanmagan!!!')
+        return ;
+      }
+      ctx.reply(data)
+    });
+})
+bot.action('kir221_20', (ctx)=>{
+  fs.readFile('./jadvalla/kir221_20.txt', 'utf8', (err, data) => {
+      if (err) {
+          ctx.reply('Ushbu guruh dars jadvali hali yuklanmagan!!!')
+        return ;
+      }
+      ctx.reply(data)
+    });
+})
+bot.action('atr222_20', (ctx)=>{
+  fs.readFile('./jadvalla/atr222_20.txt', 'utf8', (err, data) => {
+      if (err) {
+          ctx.reply('Ushbu guruh dars jadvali hali yuklanmagan!!!')
+        return ;
+      }
+      ctx.reply(data)
+    });
+})
+bot.action('mtr223_20', (ctx)=>{
+  fs.readFile('./jadvalla/mtr223_20.txt', 'utf8', (err, data) => {
+      if (err) {
+          ctx.reply('Ushbu guruh dars jadvali hali yuklanmagan!!!')
+        return ;
+      }
+      ctx.reply(data)
+    });
 })
 //Ikkinchi kurslar
 bot.action('kio210_21', (ctx)=>{
@@ -410,7 +518,6 @@ bot.action('mrr235_21', (ctx)=>{
 bot.action('sir236_21', (ctx)=>{
     fs.readFile('./jadvalla/236guruh.txt', 'utf8', (err, data) => {
         if (err) {
-            console.log(err)
             ctx.reply('Ushbu guruh dars jadvali hali yuklanmagan!!!')
           return ;
         }
@@ -445,7 +552,6 @@ bot.action('kio210_19', (ctx)=>{
         ctx.reply(data)
       });
 })
-
 bot.action('kio211_19', (ctx)=>{
     fs.readFile('./jadvalla/kio211_19.txt', 'utf8', (err, data) => {
         if (err) {
@@ -476,8 +582,8 @@ bot.action('kio213_19', (ctx)=>{
       });
 })
 
-bot.action('kkling214_19', (ctx)=>{
-    fs.readFile('./jadvalla/kkling214_19.txt', 'utf8', (err, data) => {
+bot.action('kling214_19', (ctx)=>{
+    fs.readFile('./jadvalla/kling214_19.txt', 'utf8', (err, data) => {
         if (err) {
             ctx.reply('Ushbu guruh dars jadvali hali yuklanmagan!!!')
           return ;
@@ -569,4 +675,6 @@ bot.action('mtr223_19', (ctx)=>{
         ctx.reply(data)
       });
 })
+
+
 bot.launch();
