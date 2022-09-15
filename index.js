@@ -573,7 +573,7 @@ bot.action('kio212_19', (ctx)=>{
 })
 
 bot.action('kio213_19', (ctx)=>{
-    fs.readFile('./jadvalla/kio210_21.txt', 'utf8', (err, data) => {
+    fs.readFile('./jadvalla/kio213_19.txt', 'utf8', (err, data) => {
         if (err) {
             ctx.reply('Ushbu guruh dars jadvali hali yuklanmagan!!!')
           return ;
