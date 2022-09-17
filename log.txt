@@ -1,0 +1,221 @@
+
+        bot.action('kio210_22', async (ctx)=>{
+            dars = await readGroup('kio210_22')
+            if(Object.keys(dars).length==0){
+                ctx.reply('Ushbu guruhda hali dars jadvali yuklanmagan')
+            }
+            else{
+                ctx.reply(dars[0].context)
+            }
+        });
+        
+        bot.action('kio211_22', async (ctx)=>{
+            dars = await readGroup('kio211_22')
+            if(Object.keys(dars).length==0){
+                ctx.reply('Ushbu guruhda hali dars jadvali yuklanmagan')
+            }
+            else{
+                ctx.reply(dars[0].context)
+            }
+        });
+        
+        bot.action('kio212_22', async (ctx)=>{
+            dars = await readGroup('kio212_22')
+            if(Object.keys(dars).length==0){
+                ctx.reply('Ushbu guruhda hali dars jadvali yuklanmagan')
+            }
+            else{
+                ctx.reply(dars[0].context)
+            }
+        });
+        
+        bot.action('kio214_22', async (ctx)=>{
+            dars = await readGroup('kio214_22')
+            if(Object.keys(dars).length==0){
+                ctx.reply('Ushbu guruhda hali dars jadvali yuklanmagan')
+            }
+            else{
+                ctx.reply(dars[0].context)
+            }
+        });
+        
+        bot.action('kio213_22', async (ctx)=>{
+            dars = await readGroup('kio213_22')
+            if(Object.keys(dars).length==0){
+                ctx.reply('Ushbu guruhda hali dars jadvali yuklanmagan')
+            }
+            else{
+                ctx.reply(dars[0].context)
+            }
+        });
+        
+        bot.action('ato215_22', async (ctx)=>{
+            dars = await readGroup('ato215_22')
+            if(Object.keys(dars).length==0){
+                ctx.reply('Ushbu guruhda hali dars jadvali yuklanmagan')
+            }
+            else{
+                ctx.reply(dars[0].context)
+            }
+        });
+        
+        bot.action('ato216_22', async (ctx)=>{
+            dars = await readGroup('ato216_22')
+            if(Object.keys(dars).length==0){
+                ctx.reply('Ushbu guruhda hali dars jadvali yuklanmagan')
+            }
+            else{
+                ctx.reply(dars[0].context)
+            }
+        });
+        
+        bot.action('ato218_22', async (ctx)=>{
+            dars = await readGroup('ato218_22')
+            if(Object.keys(dars).length==0){
+                ctx.reply('Ushbu guruhda hali dars jadvali yuklanmagan')
+            }
+            else{
+                ctx.reply(dars[0].context)
+            }
+        });
+        
+        bot.action('mto219_22', async (ctx)=>{
+            dars = await readGroup('mto219_22')
+            if(Object.keys(dars).length==0){
+                ctx.reply('Ushbu guruhda hali dars jadvali yuklanmagan')
+            }
+            else{
+                ctx.reply(dars[0].context)
+            }
+        });
+        
+        bot.action('ato217_22', async (ctx)=>{
+            dars = await readGroup('ato217_22')
+            if(Object.keys(dars).length==0){
+                ctx.reply('Ushbu guruhda hali dars jadvali yuklanmagan')
+            }
+            else{
+                ctx.reply(dars[0].context)
+            }
+        });
+        
+        bot.action('mto220_22', async (ctx)=>{
+            dars = await readGroup('mto220_22')
+            if(Object.keys(dars).length==0){
+                ctx.reply('Ushbu guruhda hali dars jadvali yuklanmagan')
+            }
+            else{
+                ctx.reply(dars[0].context)
+            }
+        });
+        
+        bot.action('mro221_22', async (ctx)=>{
+            dars = await readGroup('mro221_22')
+            if(Object.keys(dars).length==0){
+                ctx.reply('Ushbu guruhda hali dars jadvali yuklanmagan')
+            }
+            else{
+                ctx.reply(dars[0].context)
+            }
+        });
+        
+        bot.action('mro222_22', async (ctx)=>{
+            dars = await readGroup('mro222_22')
+            if(Object.keys(dars).length==0){
+                ctx.reply('Ushbu guruhda hali dars jadvali yuklanmagan')
+            }
+            else{
+                ctx.reply(dars[0].context)
+            }
+        });
+        
+        bot.action('kir230_22', async (ctx)=>{
+            dars = await readGroup('kir230_22')
+            if(Object.keys(dars).length==0){
+                ctx.reply('Ushbu guruhda hali dars jadvali yuklanmagan')
+            }
+            else{
+                ctx.reply(dars[0].context)
+            }
+        });
+        
+        bot.action('kir231_22', async (ctx)=>{
+            dars = await readGroup('kir231_22')
+            if(Object.keys(dars).length==0){
+                ctx.reply('Ushbu guruhda hali dars jadvali yuklanmagan')
+            }
+            else{
+                ctx.reply(dars[0].context)
+            }
+        });
+        
+        bot.action('sio223_22', async (ctx)=>{
+            dars = await readGroup('sio223_22')
+            if(Object.keys(dars).length==0){
+                ctx.reply('Ushbu guruhda hali dars jadvali yuklanmagan')
+            }
+            else{
+                ctx.reply(dars[0].context)
+            }
+        });
+        
+        bot.action('atr232_22', async (ctx)=>{
+            dars = await readGroup('atr232_22')
+            if(Object.keys(dars).length==0){
+                ctx.reply('Ushbu guruhda hali dars jadvali yuklanmagan')
+            }
+            else{
+                ctx.reply(dars[0].context)
+            }
+        });
+        
+        bot.action('sio224_22', async (ctx)=>{
+            dars = await readGroup('sio224_22')
+            if(Object.keys(dars).length==0){
+                ctx.reply('Ushbu guruhda hali dars jadvali yuklanmagan')
+            }
+            else{
+                ctx.reply(dars[0].context)
+            }
+        });
+        
+        bot.action('atr233_22', async (ctx)=>{
+            dars = await readGroup('atr233_22')
+            if(Object.keys(dars).length==0){
+                ctx.reply('Ushbu guruhda hali dars jadvali yuklanmagan')
+            }
+            else{
+                ctx.reply(dars[0].context)
+            }
+        });
+        
+        bot.action('mtr234_22', async (ctx)=>{
+            dars = await readGroup('mtr234_22')
+            if(Object.keys(dars).length==0){
+                ctx.reply('Ushbu guruhda hali dars jadvali yuklanmagan')
+            }
+            else{
+                ctx.reply(dars[0].context)
+            }
+        });
+        
+        bot.action('mrr235_22', async (ctx)=>{
+            dars = await readGroup('mrr235_22')
+            if(Object.keys(dars).length==0){
+                ctx.reply('Ushbu guruhda hali dars jadvali yuklanmagan')
+            }
+            else{
+                ctx.reply(dars[0].context)
+            }
+        });
+        
+        bot.action('sir236_22', async (ctx)=>{
+            dars = await readGroup('sir236_22')
+            if(Object.keys(dars).length==0){
+                ctx.reply('Ushbu guruhda hali dars jadvali yuklanmagan')
+            }
+            else{
+                ctx.reply(dars[0].context)
+            }
+        });
+        
