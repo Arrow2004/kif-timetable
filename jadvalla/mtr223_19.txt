@@ -1,39 +1,38 @@
-    223-19 MTr Jadvali: 
+217-19 MTo‘ Jadvali: 
     1️⃣-Dushanba:
-    1) IT/Mutaxassislik tanlov fani 2 (Multimedia dizayn) (Ma'ruza)
-    - (5.01)
-    2) IT/Mutaxassislik tanlov fani 2 (Multimedia dizayn) (Amal.)
-    - (5.01)
-    3) IT/Mutaxassislik tanlov fani 2 (Multimedia dizayn) (Amal.)
-    - (5.01)
-   
-    2️⃣-Seshanba:
-    1) IT/Mutaxassislik tanlov fani 1 (3D texnologiya) (Ma'ruza)
-    - (5.01)
-    2) IT/Mutaxassislik tanlov fani 1 (3D texnologiya) (Amal.)
-    - (5.01)
-    3) IT/Mutaxassislik tanlov fani 1 (3D texnologiya) (Amal.)
-    - (5.01)
-    
-    3️⃣-Chorshanba:
-    1) Web dizayn (Ma'ruza)
-    - (5.03)
-    2) Web dizayn (Amal.)
-    - (4.04)
-    3) Web dizayn (Amal.)
-    - (4.04)
-        
-   4️⃣ -Payshanba:
-    1) IT/Mutaxassislik tanlov fani 3 (Multimedia injiniringi) (Amal.)
-    - (3.04)
-    2) IT/Mutaxassislik tanlov fani 3 (Multimedia injiniringi) (Amal.)
-    - (3.04)
-    3) IT/Mutaxassislik tanlov fani 3 (Multimedia injiniringi) (Ma'ruza)
+    1) IT/Mutaxassislik tanlov fani 1 (3D texnologiya) (Amal.)
     - (5.07)
+    2) IT/Mutaxassislik tanlov fani 1 (3D texnologiya) (Amal.)
+    - (5.07)
+    3) IT/Mutaxassislik tanlov fani 1 (3D texnologiya) (Ma'ruza)
+    - (4.02)
     
+    2️⃣-Seshanba:
+    1) IT/Mutaxassislik tanlov fani 2 (Multimedia dizayn) (Amal.)
+    - (5.03)
+    2) IT/Mutaxassislik tanlov fani 2 (Multimedia dizayn) (Ma'ruza)
+    - (4.02)
+    3) IT/Mutaxassislik tanlov fani 2 (Multimedia dizayn) (Amal.)
+    - (5.03)
+   
+    3️⃣-Chorshanba:
+    1) IT/Mutaxassislik tanlov fani 3 (Multimedia injiniringi) (Ma'ruza)
+    - (5.02)
+    2) IT/Mutaxassislik tanlov fani 3 (Multimedia injiniringi) (Amal.)
+    - (5.01)
+    3) IT/Mutaxassislik tanlov fani 3 (Multimedia injiniringi) (Amal.)
+    - (5.01)
+    
+    4️⃣-Payshanba:
+    1) Web dizayn (Amal.)
+    - (6.07)
+    2) Web dizayn (Amal.)
+    - (6.07)
+    3) Web dizayn (Ma'ruza)
+    - (4.02)
+        
     5️⃣-Juma:
     ***
 
     6️⃣-Shanba:
     ***
-    
