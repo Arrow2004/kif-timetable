@@ -9,7 +9,7 @@ const Group = require("./user").Group;
 fs = require('fs');
 mongoose
   .connect(
-    "mongodb+srv://root:shirina1708@cluster0.ufftb.mongodb.net/kif-timetable?retryWrites=true&w=majority",
+    "mongodb+srv://root:"+process.env.PASSWORD+"@cluster0.ufftb.mongodb.net/kif-timetable?retryWrites=true&w=majority",
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,
